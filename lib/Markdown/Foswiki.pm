@@ -1,7 +1,7 @@
 package Markdown::Foswiki;
 use strict;
 use warnings;
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use 5.010;
 
@@ -320,8 +320,8 @@ version 0.01
     
     use Markdown::Foswiki;
     my $mc = Markdown::Foswiki->new();
-    my $md_text = $mc->getData('index.md');
-    my $fw_text = $mc->process($md_text);
+    my @md_lines = $mc->getData('index.md');
+    my $fw_text = $mc->process(@md_lines);;
     print $fw_text;
 
 
@@ -336,7 +336,7 @@ version 0.01
 
 This module markdown format files foswiki (Twiki) to convert the format of the module.
 
-markdown in the case of internal links basepath (directory) specified in the config,<br/>
+markdown in the case of internal links basepath (directory) specified in the config,
 and remove all the extensions are removed and replaced with basepath.
 
 If the external link is retained.
