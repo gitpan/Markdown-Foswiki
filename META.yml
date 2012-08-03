@@ -23,5 +23,5 @@ requires:
   perl: 5.10.0
 resources:
   license: http://dev.perl.org/licenses/
-  repository: origin
-version: 0.03
+  repository: https://github.com/skyend/Markdown--Foswiki.git
+version: 0.04
